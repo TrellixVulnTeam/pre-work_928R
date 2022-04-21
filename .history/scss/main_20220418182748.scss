@@ -1,0 +1,52 @@
+// Variables 
+$website-width: 1280px;
+$backdrop: #e2e2e2;
+$shading: #f5f5f5;
+$mainText: #227396;
+$secondaryText: #71091e;
+$tertiaryText: #605f5e;
+$linkText: #71ad82;
+$heroImage: url(#);
+
+
+// General Stylings
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    background: $backdrop;
+    line-height: 1.6;
+}
+
+a, li {
+    text-decoration: none;
+    color: $linkText;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+h1 {
+    color: $mainText;
+    font-size: x-large;
+    font-family: 'Catamaran', sans-serif;
+}
+
+h2 {
+    color: $secondaryText;
+    font-size: larger;
+    font-family: 'Catamaran', sans-serif;
+}
+
+p {
+    color: $tertiaryText;
+    font-size: medium;
+    font-family: 'Dosis', sans-serif;
+}
+
+// Header
+
+#header {
+    
+}

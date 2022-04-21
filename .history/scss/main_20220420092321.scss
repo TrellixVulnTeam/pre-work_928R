@@ -1,0 +1,133 @@
+@import 'config';
+
+// General Stylings
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.6;
+}
+
+a, li {
+    text-decoration: none;
+    color: $mainText;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+h1 {
+    color: $mainText;
+    font-size: xx-large;
+    font-family: 'Catamaran', sans-serif;
+}
+
+h2 {
+    color: $mainText;
+    font-size: larger;
+    font-family: 'Catamaran', sans-serif;
+}
+
+h3 {
+    color: $tertiaryText;
+    font-size: medium;
+    font-family: 'Catamaran',
+    sans-serif;
+}
+
+p {
+    color: $secondaryText;
+    font-size: medium;
+    font-family: 'Dosis', sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+// Buttons 
+%btn-shared {
+    display: inline-block;
+    padding: 0.5rem .5rem;
+    transition: all 0.5s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn {
+    &-main {
+        @extend %btn-shared;
+        color: $mainText;
+        background-color: transparent;
+        border-radius: 50%;
+        border: 1px $mainText solid;
+    }
+}
+
+button[class^='btn-']:hover,
+a[class^='btn-']:hover {
+    background-color: $styleText;
+}
+
+// Responsive queries
+
+// Mobile Devices
+@media (max-width: 800px) {
+    #header-home {
+        height: 15rem;
+
+        .header-content {
+            padding-top: 5rem;
+        }
+    }
+}
+
+// Smart phones
+@media (max-width: 500px) {
+    #main-nav {
+        flex-direction: column;
+        align-items: center;
+
+        li {
+            padding: 1rem;
+        }
+    }
+
+    #header {
+        &-home {
+            height: 10rem;
+            border-bottom: 1px solid $styleText;
+            background-position: 20% 30%;
+
+            .header-content {
+                display: none;
+            }
+        }
+
+        &-inner {
+            height: 10rem;
+        }
+    }
+
+    // Stack Grid Columns
+
+    #home-a .specials,
+    .about-me, .profile,
+    .fields {
+        grid-template-columns: 1fr;
+    }
+
+    #home {
+        &-a {
+            .specials {
+                border-bottom: 1px $mainText solid;
+
+                &:last-child {
+                    border: none;
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+
+}

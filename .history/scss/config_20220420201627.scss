@@ -1,0 +1,304 @@
+// Variables 
+$website-width: 1280px;
+$shading: #f5f5f5;
+$backdrop: #e2e2e2;
+$mainText: #71091e;
+$secondaryText: #605f5e;
+$tertiaryText: #227396;
+$styleText: #232023;
+$bg-image: url("../img/hero_image3.jpeg");
+
+// Utilities
+.container {
+    max-width: $website-width;
+    padding: 0 1.5rem;
+    margin: auto;
+    overflow: hidden;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    display: block;
+    padding-bottom: 0.5rem;
+    font-weight: 100; 
+    text-align: center;
+}
+
+// Margins, Padding, Separators
+.py {
+    &-1 {
+        padding: 1rem 0;
+    }
+
+    &-2 {
+        padding: 2rem 0;
+    }
+
+    &-3 {
+        padding: 3rem 0;
+    }
+
+    &-4 {
+        padding: 4rem 0;
+    }
+}
+
+.px {
+    &-1 {
+        padding: 0 1rem;
+    }
+
+    &-2 {
+        padding: 0 2rem;
+    }
+
+    &-3 {
+        padding: 0 3rem;
+    }
+
+    &-4 {
+        padding: 0 4rem;
+    }
+}
+
+.my {
+    &-1 {
+        margin: 1rem 0;
+    }
+
+    &-2 {
+        margin: 2rem 0;
+    }
+
+    &-3 {
+        margin: 3rem 0;
+    }
+
+    &-4 {
+        margin: 4rem 0;
+    }
+}
+
+
+// Header
+#header {
+
+    // Home
+    &-home {
+        background: $bg-image no-repeat center right / cover;
+        height: 100vh;
+        width: 100vw;
+        color: #fff;
+
+        // Content
+        .header-content {
+            background: rgba(65, 65, 65, 0.6);
+            text-align: center;
+            padding: 20px 30px;
+            line-height: 1.2;
+            border-radius: 5px;
+            margin: 2rem 20rem;
+            
+
+            /* How do I make the card bigger and size independent of the state change? */
+        }
+
+    }
+
+    // Inner Header
+    &-inner {
+        background: $bg-image no-repeat 40% 50% / cover;
+        border-bottom: 1px $backdrop solid;
+        height: 5.5rem;
+        
+        ul,
+        li,
+        a {
+            color: #e2e2e2;
+        }
+    }
+}
+
+// Logo
+#logo {
+    width: 70px;
+    height: 70px;
+}
+
+// Main Nav
+#main-nav {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 1rem;
+
+    ul {
+        display: flex;
+    }
+
+    li {
+        list-style: none;
+        padding: 1rem 1rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: $styleText;
+        font-size: x-large;
+        border-bottom: 1px transparent solid;
+        padding-bottom: 0.5rem;
+        transition: border-color 0.5s;
+
+        &:hover {
+            border-color: $styleText;
+            color: $$backdrop;
+            font-weight: 500;
+            font-size: x-large;
+        }
+
+        &.current {
+            border-color: $styleText;
+            font-weight: 200;
+        }
+    }
+}
+
+// Home Section
+#home {
+    &-a {
+        background: $shading;
+
+        .specials {
+            margin-top: 3rem;
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-columns: repeat(4, 1fr);
+
+            .fas {
+                color: $styleText;
+                padding-bottom: 0.4rem;
+            }
+        }
+    }
+}
+
+// Footer
+
+#main-footer {
+    background: $backdrop;
+    color: $styleText;
+    height: 5rem;
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        height: 5rem;
+        align-items: center;
+        color: $styleText;
+
+        .social .fab {
+            margin-right: 1rem;
+            border: 2px $styleText solid;
+            border-radius: 50%;
+            height: 15px;
+            width: 15px;
+            line-height: 15px;
+            text-align: center;
+            padding: 0.5rem;
+
+            &:hover {
+                background: $mainText;
+            }
+        }
+    }
+}
+
+// About Me
+#about {
+    &-a {
+        .about-info {
+            display: grid;
+            grid-template-areas: 
+                'bio-img bio'
+                /* Certifications will go here */
+            ;
+            grid-gap: 1.2rem;
+            align-items: center;
+
+            /* BACKGROUND BLUR AND IMAGE FEATURE */
+        }
+
+        .bio-img {
+            grid-area: bio-img;
+            height: 250px;
+            width: 190px;
+            border-radius: 50%;
+            margin: 1rem 1rem;
+            border: 1px solid $tertiaryText;
+        }
+
+        .bio {
+            grid-area: bio;
+            border-left: 3px solid $tertiaryText;
+            padding: 1rem 1rem;
+        }
+    }
+}
+
+// Contact Form
+
+#contact {
+    &-a {
+        .fields {
+            padding: 0 4rem;
+            display: grid;
+            grid-template-areas: 
+                'name email'
+                'subject phone'
+                'message message'
+            ;
+            grid-gap: 1.2rem;
+            margin-bottom: 1.2rem;
+
+            // Grid Placement
+            .name-input {
+                grid-area: name;
+            }
+            .subject-input {
+                grid-area: subject;
+            }
+            .email-input {
+                grid-area: email;
+            }
+            .phone-input {
+                grid-area: phone;
+            }
+            .message-input {
+                grid-area: message;
+                height: 100px;
+            }
+        }
+    }
+
+    &-b {
+        background: $shading;
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            text-align: center;
+
+            div {
+                border-bottom: 1px $mainText solid;
+                padding: .5rem 1rem;
+
+                &:last-child {
+                    border: none;
+                }
+            }
+        }
+    }
+}

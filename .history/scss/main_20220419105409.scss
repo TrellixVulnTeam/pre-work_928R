@@ -1,0 +1,106 @@
+// Variables 
+$website-width: 1280px;
+$shading: #f5f5f5;
+$mainText: #227396;
+$secondaryText: #71091e;
+$tertiaryText: #605f5e;
+$linkText: #71ad82;
+$bgImage: url("img/hero_image.jpg");
+
+
+// General Stylings
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.6;
+}
+
+a, li {
+    text-decoration: none;
+    color: $linkText;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+h1 {
+    color: $secondaryText;
+    font-size: xx-large;
+    font-family: 'Catamaran', sans-serif;
+}
+
+h2 {
+    color: $secondaryText;
+    font-size: larger;
+    font-family: 'Catamaran', sans-serif;
+}
+
+p {
+    color: $tertiaryText;
+    font-size: medium;
+    font-family: 'Dosis', sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+// Utilities
+
+.container {
+    max-width: $website-width;
+    padding: 0 1.5rem;
+    margin: auto;
+    overflow: hidden;
+}
+
+// Header
+
+#header {
+   &-home {
+    background: $bgImage no-repeat center right \ cover;
+    height: 100vh;
+    color: #fff;
+   } 
+}
+
+// Logo
+
+#logo {
+    width: 70px;
+    height: 70px;
+}
+
+// Main Nav
+
+#main-nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+
+    ul {
+        display: flex;
+    }
+
+    li {
+        list-style: none;
+        padding: 1rem 1.5rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: $linkText;
+        border-bottom: 1px transparent solid;
+        padding-bottom: 0.5rem;
+        transition: border-color 0.5s;
+
+        &:hover {
+            border-color: $mainText;
+        }
+
+        &.current {
+            border-color: $secondaryText;
+        }
+    }
+}

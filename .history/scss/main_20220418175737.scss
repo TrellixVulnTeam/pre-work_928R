@@ -1,0 +1,20 @@
+$backdrop: #e2e2e2;
+
+
+// General Stylings
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    background: $backdrop;
+    font-family: "Catamaran", sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}

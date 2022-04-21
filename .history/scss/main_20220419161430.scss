@@ -1,0 +1,55 @@
+@import 'config';
+
+// General Stylings
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.6;
+}
+
+a, li {
+    text-decoration: none;
+    color: $mainText;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+h1 {
+    color: $mainText;
+    font-size: xx-large;
+    font-family: 'Catamaran', sans-serif;
+}
+
+h2 {
+    color: $mainText;
+    font-size: larger;
+    font-family: 'Catamaran', sans-serif;
+}
+
+h3 {
+    color: $tertiaryText;
+    font-size: medium;
+    font-family: 'Catamaran',
+    sans-serif;
+}
+
+p {
+    color: $secondaryText;
+    font-size: medium;
+    font-family: 'Dosis', sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+.underline {
+
+}
+
+.vertical-line {
+    border-left: 40px $styleText solid;
+    height: 80px;
+}

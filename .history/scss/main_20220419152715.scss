@@ -1,0 +1,154 @@
+@import 'config';
+
+// General Stylings
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.6;
+}
+
+a, li {
+    text-decoration: none;
+    color: $mainText;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+h1 {
+    color: $mainText;
+    font-size: xx-large;
+    font-family: 'Catamaran', sans-serif;
+}
+
+h2 {
+    color: $mainText;
+    font-size: larger;
+    font-family: 'Catamaran', sans-serif;
+}
+
+h3 {
+    color: $tertiaryText;
+    font-size: medium;
+    font-family: 'Catamaran',
+    sans-serif;
+}
+
+p {
+    color: $secondaryText;
+    font-size: medium;
+    font-family: 'Dosis', sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+
+// Header
+#header {
+    // Home
+    &-home {
+        background: url("img/hero_image2.jpeg") no-repeat center right / cover;
+        height: 100vh;
+        color: #fff;
+
+    // Content
+    .header-content {
+        text-align: center;
+        padding-top: 3%;
+        line-height: 1.2;
+    }
+
+   } 
+}
+
+// Logo
+#logo {
+    width: 70px;
+    height: 70px;
+}
+
+// Main Nav
+#main-nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+
+    ul {
+        display: flex;
+    }
+
+    li {
+        list-style: none;
+        padding: 1rem 1rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: $mainText;
+        border-bottom: 1px transparent solid;
+        padding-bottom: 0.5rem;
+        transition: border-color 0.5s;
+
+        &:hover {
+            border-color: $styleText;
+            color: $styleText;
+        }
+
+        &.current {
+            border-color: $styleText;
+        }
+    }
+}
+
+// Home Section
+#home {
+    &-a {
+        background: $shading;
+
+        .specials {
+            margin-top: 3rem;
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-columns: repeat(4, 1fr);
+
+            .fas {
+                color: $styleText;
+                padding-bottom: 0.4rem;
+            }
+        }
+    }
+}
+
+// Footer
+
+#main-footer {
+    background: $backdrop;
+    color: $styleText;
+    height: 5rem;
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        height: 5rem;
+        align-items: center;
+        color: $styleText;
+
+        .social .fab {
+            margin-right: 1rem;
+            border: 2px $styleText solid;
+            border-radius: 50%;
+            height: 20px;
+            width: 20px;
+            line-height: 20px;
+            text-align: center;
+            padding: 0.5rem;
+
+            &:hover {
+                background: $mainText;
+            }
+        }
+    }
+}

@@ -1,0 +1,202 @@
+// Variables 
+$website-width: 1280px;
+$shading: #f5f5f5;
+$backdrop: #e2e2e2;
+$mainText: #71091e;
+$secondaryText: #605f5e;
+$tertiaryText: #227396;
+$styleText: #71ad82;
+
+// General Stylings
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.6;
+}
+
+a, li {
+    text-decoration: none;
+    color: $mainText;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+h1 {
+    color: $mainText;
+    font-size: xx-large;
+    font-family: 'Catamaran', sans-serif;
+}
+
+h2 {
+    color: $mainText;
+    font-size: larger;
+    font-family: 'Catamaran', sans-serif;
+}
+
+h3 {
+    color: $mainText;
+    font-size: medium;
+    font-family: 'Catamaran',
+    sans-serif;
+}
+
+p {
+    color: $secondaryText;
+    font-size: medium;
+    font-family: 'Dosis', sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+// Utilities
+
+.container {
+    max-width: $website-width;
+    padding: 0 1.5rem;
+    margin: auto;
+    overflow: hidden;
+}
+
+.text-center {
+    align-items: center;
+}
+
+
+// Margins and Padding
+
+.py {
+    &-1 {
+        padding: 1rem 0;
+    }
+
+    &-2 {
+        padding: 2rem 0;
+        }
+
+    &-3 {
+        padding: 3rem 0;
+        }
+
+    &-4 {
+        padding: 4rem 0;
+        }
+}
+
+.my {
+    &-1 {
+        margin: 1rem 0;
+    }
+
+    &-2 {
+        margin: 2rem 0;
+    }
+
+    &-3 {
+        margin: 3rem 0;
+    }
+
+    &-4 {
+        margin: 4rem 0;
+    }
+}
+
+// Buttons 
+
+%btn-shared {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    transition: all 0.5s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn {
+    &-main {
+        @extend %btn-shared;
+        color: $tertiaryText;
+        background-color: $backdrop;
+    }
+}
+
+button[class^='btn-']:hover,
+a[class^='btn-']:hover {
+    background-color: $tertiaryText;
+}
+
+
+// Header
+
+
+#header {
+    // Home
+    &-home {
+        background: url("img/hero_image2.jpeg") no-repeat center right / cover;
+        height: 100vh;
+        color: #fff;
+
+    // Content
+    .header-content {
+        text-align: center;
+        padding-top: 3%;
+        line-height: 1.2;
+    }
+
+   } 
+}
+
+// Logo
+
+#logo {
+    width: 70px;
+    height: 70px;
+}
+
+// Main Nav
+
+#main-nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+
+    ul {
+        display: flex;
+    }
+
+    li {
+        list-style: none;
+        padding: 1rem 1rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: $mainText;
+        border-bottom: 1px transparent solid;
+        padding-bottom: 0.5rem;
+        transition: border-color 0.5s;
+
+        &:hover {
+            border-color: $styleText;
+            color: $styleText;
+        }
+
+        &.current {
+            border-color: $styleText;
+        }
+    }
+}
+
+// Home Sections
+
+#home {
+    &-a {
+        .specials {
+            margin-top: 3rem;
+            display: grid;
+            
+        }
+    }
+}
